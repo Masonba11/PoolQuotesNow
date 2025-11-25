@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-aqua-pool-500 {
+    background-color: #14b8a6 !important;
+  }
+
+  .bg-aqua-pool-600 {
+    background-color: #06b6d4 !important;
+  }
+
+  .text-aqua-pool-500 {
+    color: #14b8a6 !important;
+  }
+
+  .text-aqua-pool-600 {
+    color: #06b6d4 !important;
+  }
+
+  .border-aqua-pool-500 {
+    border-color: #14b8a6 !important;
+  }
+
+  .hover\:bg-aqua-pool-600:hover {
+    background-color: #06b6d4 !important;
+  }
+
+  .hover\:text-aqua-pool-600:hover {
+    color: #06b6d4 !important;
+  }
+}
