@@ -50,9 +50,10 @@ export default function ContactForm() {
             <Image
               src="/logo.png"
               alt="PoolQuotesNow Logo"
-              width={60}
-              height={60}
+              width={180}
+              height={180}
               className="object-contain"
+              style={{ backgroundColor: "transparent" }}
             />
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">

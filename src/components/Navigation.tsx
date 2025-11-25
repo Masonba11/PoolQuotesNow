@@ -5,18 +5,16 @@ export default function Navigation() {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center space-x-2">
+        <div className="flex justify-between items-center h-20">
+          <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
               alt="PoolQuotesNow Logo"
-              width={40}
-              height={40}
+              width={120}
+              height={120}
               className="object-contain"
+              style={{ backgroundColor: "transparent" }}
             />
-            <span className="text-2xl font-bold" style={{ color: "#14B8A6" }}>
-              PoolQuotesNow
-            </span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
