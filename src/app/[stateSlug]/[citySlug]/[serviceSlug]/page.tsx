@@ -124,11 +124,11 @@ export default async function ServicePage({
     organizationSchema,
     websiteSchema,
   ];
-  
+
   if (serviceSchema) {
     schemas.push(serviceSchema);
   }
-  
+
   if (faqSchema) {
     schemas.push(faqSchema);
   }
