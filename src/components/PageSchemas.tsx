@@ -15,7 +15,7 @@ export default function PageSchemas({
   includeBreadcrumb = false,
 }: PageSchemasProps) {
   const organizationSchema = generateOrganizationSchema();
-  const schemas = [organizationSchema];
+  const schemas: object[] = [organizationSchema];
 
   if (includeWebsite) {
     const websiteSchema = generateWebsiteSchema();
