@@ -123,10 +123,14 @@ export default async function ServicePage({
     breadcrumbSchema,
     organizationSchema,
     websiteSchema,
-    faqSchema,
   ];
+  
   if (serviceSchema) {
     schemas.push(serviceSchema);
+  }
+  
+  if (faqSchema) {
+    schemas.push(faqSchema);
   }
 
   return (

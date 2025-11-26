@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SERVICES, STATES, getServiceBySlug } from "@/data/locations";
 import {
-  generateBreadcrumbSchema,
+  generateServicePageBreadcrumbSchema,
   generateOrganizationSchema,
   generateWebsiteSchema,
   generateFAQSchema,
@@ -67,7 +67,7 @@ export default async function ServicePage({
     );
   }
 
-  const breadcrumbSchema = generateBreadcrumbSchema();
+  const breadcrumbSchema = generateServicePageBreadcrumbSchema(serviceSlug);
   const organizationSchema = generateOrganizationSchema();
   const websiteSchema = generateWebsiteSchema();
 
@@ -98,11 +98,16 @@ export default async function ServicePage({
 
   const faqSchema = generateFAQSchema(faqs);
 
+  const schemas = [
+    breadcrumbSchema,
+    organizationSchema,
+    websiteSchema,
+    faqSchema,
+  ].filter(Boolean);
+
   return (
     <>
-      <JSONLDScript
-        data={[breadcrumbSchema, organizationSchema, websiteSchema, faqSchema]}
-      />
+      <JSONLDScript data={schemas} />
       <div className="min-h-screen bg-white">
         <Hero
           title={service.name}

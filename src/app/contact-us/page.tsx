@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Hero from "@/components/Hero";
+import PageSchemas from "@/components/PageSchemas";
 
 export default function ContactUsPage() {
   const router = useRouter();
@@ -40,12 +41,14 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <Hero
-        title="Contact Us"
-        subtitle="Get in touch with us to find trusted pool professionals in your area"
-        showCTAs={false}
-      />
+    <>
+      <PageSchemas includeWebsite={true} includeBreadcrumb={true} />
+      <div className="min-h-screen bg-white">
+        <Hero
+          title="Contact Us"
+          subtitle="Get in touch with us to find trusted pool professionals in your area"
+          showCTAs={false}
+        />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
@@ -241,5 +244,6 @@ export default function ContactUsPage() {
         </div>
       </main>
     </div>
+    </>
   );
 }

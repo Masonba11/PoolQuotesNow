@@ -19,8 +19,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = generateOrganizationSchema();
+
   return (
     <html lang="en" className="bg-white">
+      <head>
+        <JSONLDScript data={organizationSchema} />
+      </head>
       <body className="min-h-screen flex flex-col bg-white">
         <Navigation />
         <main className="flex-grow bg-white">{children}</main>

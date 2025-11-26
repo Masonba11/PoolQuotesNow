@@ -6,6 +6,7 @@ import {
   generateOrganizationSchema,
   generateWebsiteSchema,
   generateFAQSchema,
+  generateStatePageSchema,
 } from "@/lib/seo";
 import { generateStateContent } from "@/lib/content";
 import { getArticlesByState } from "@/data/articleContent";
@@ -60,6 +61,7 @@ export default async function StatePage({
   const breadcrumbSchema = generateBreadcrumbSchema(stateSlug);
   const organizationSchema = generateOrganizationSchema();
   const websiteSchema = generateWebsiteSchema();
+  const statePageSchema = generateStatePageSchema(stateSlug);
 
   const content = generateStateContent(stateSlug);
 
@@ -83,11 +85,17 @@ export default async function StatePage({
 
   const faqSchema = generateFAQSchema(content.faqs);
 
+  const schemas = [
+    breadcrumbSchema,
+    organizationSchema,
+    websiteSchema,
+    statePageSchema,
+    faqSchema,
+  ].filter(Boolean);
+
   return (
     <>
-      <JSONLDScript
-        data={[breadcrumbSchema, organizationSchema, websiteSchema, faqSchema]}
-      />
+      <JSONLDScript data={schemas} />
       <div className="min-h-screen bg-white">
         <Hero
           title={`Pool Services in ${state.name}`}

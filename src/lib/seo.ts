@@ -74,7 +74,7 @@ export function generateBreadcrumbSchema(
   serviceSlug?: string
 ) {
   const items: Array<{ name: string; item: string }> = [
-    { name: "Home", item: "https://poolquotesnow.com" },
+    { name: "Home", item: "https://poolquotesnow.com/" },
   ];
 
   if (stateSlug) {
@@ -82,7 +82,7 @@ export function generateBreadcrumbSchema(
     if (state) {
       items.push({
         name: state.name,
-        item: `https://poolquotesnow.com/${stateSlug}`,
+        item: `https://poolquotesnow.com/${stateSlug}/`,
       });
     }
   }
@@ -92,7 +92,7 @@ export function generateBreadcrumbSchema(
     if (city) {
       items.push({
         name: city.name,
-        item: `https://poolquotesnow.com/${stateSlug}/${citySlug}`,
+        item: `https://poolquotesnow.com/${stateSlug}/${citySlug}/`,
       });
     }
   }
@@ -102,7 +102,7 @@ export function generateBreadcrumbSchema(
     if (service) {
       items.push({
         name: service.name,
-        item: `https://poolquotesnow.com/${stateSlug}/${citySlug}/${serviceSlug}`,
+        item: `https://poolquotesnow.com/${stateSlug}/${citySlug}/${serviceSlug}/`,
       });
     }
   }
@@ -127,7 +127,7 @@ export function generateOrganizationSchema() {
     url: "https://poolquotesnow.com",
     logo: "https://poolquotesnow.com/logo.png",
     description:
-      "Find trusted pool professionals for installation, repair, cleaning, resurfacing, and remodeling services.",
+      "PoolQuotesNow connects homeowners with trusted pool professionals for installation, repair, cleaning, resurfacing, and remodeling services.",
     sameAs: [],
   };
 }
@@ -160,19 +160,16 @@ export function generateServiceSchema(
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `${service.name} in ${city.name}, ${state.name}`,
-    description: service.description,
+    serviceType: service.name,
     areaServed: {
       "@type": "City",
       name: city.name,
-      containedIn: {
-        "@type": "State",
-        name: state.name,
-      },
+      addressRegion: state.abbreviation,
     },
     provider: {
-      "@type": "LocalBusiness",
+      "@type": "Organization",
       name: "PoolQuotesNow",
+      url: "https://poolquotesnow.com",
     },
   };
 }
@@ -180,6 +177,8 @@ export function generateServiceSchema(
 export function generateFAQSchema(
   faqs: Array<{ question: string; answer: string }>
 ) {
+  if (!faqs || faqs.length === 0) return null;
+  
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -191,5 +190,146 @@ export function generateFAQSchema(
         text: faq.answer,
       },
     })),
+  };
+}
+
+// State Page Schema
+export function generateStatePageSchema(stateSlug: string) {
+  const state = getStateBySlug(stateSlug);
+  if (!state) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Pool Services",
+    areaServed: {
+      "@type": "State",
+      name: state.name,
+      addressRegion: state.abbreviation,
+    },
+    provider: {
+      "@type": "Organization",
+      name: "PoolQuotesNow",
+    },
+  };
+}
+
+// City Page Schema
+export function generateCityPageSchema(
+  stateSlug: string,
+  citySlug: string
+) {
+  const state = getStateBySlug(stateSlug);
+  const city = getCityBySlug(stateSlug, citySlug);
+  if (!state || !city) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Pool Services",
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+      addressRegion: state.abbreviation,
+    },
+    provider: {
+      "@type": "Organization",
+      name: "PoolQuotesNow",
+    },
+  };
+}
+
+// Services Breadcrumb Schema
+export function generateServicePageBreadcrumbSchema(serviceSlug: string) {
+  const service = getServiceBySlug(serviceSlug);
+  if (!service) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://poolquotesnow.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://poolquotesnow.com/services/",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.name,
+        item: `https://poolquotesnow.com/services/${serviceSlug}/`,
+      },
+    ],
+  };
+}
+
+// Blog Breadcrumb Schema
+export function generateBlogBreadcrumbSchema(
+  stateSlug: string,
+  articleSlug: string,
+  articleTitle: string
+) {
+  const state = getStateBySlug(stateSlug);
+  if (!state) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://poolquotesnow.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://poolquotesnow.com/blog/",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: state.name,
+        item: `https://poolquotesnow.com/blog/${stateSlug}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: articleTitle,
+        item: `https://poolquotesnow.com/blog/${stateSlug}/${articleSlug}/`,
+      },
+    ],
+  };
+}
+
+// Blog Article Schema
+export function generateArticleSchema(
+  stateSlug: string,
+  articleSlug: string,
+  articleTitle: string,
+  publishDate?: string
+) {
+  const state = getStateBySlug(stateSlug);
+  if (!state) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: articleTitle,
+    author: {
+      "@type": "Organization",
+      name: "PoolQuotesNow",
+    },
+    datePublished: publishDate || new Date().toISOString().split("T")[0],
+    about: `${state.name} pool services`,
   };
 }

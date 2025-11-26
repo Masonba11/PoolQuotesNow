@@ -1,11 +1,25 @@
 import Link from "next/link";
 import { STATES, SERVICES } from "@/data/locations";
+import {
+  generateOrganizationSchema,
+  generateWebsiteSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/seo";
+import JSONLDScript from "@/components/JSONLDScript";
 import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
 
 export default function Home() {
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebsiteSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema();
+
   return (
-    <div className="min-h-screen">
+    <>
+      <JSONLDScript
+        data={[organizationSchema, websiteSchema, breadcrumbSchema]}
+      />
+      <div className="min-h-screen">
       <Hero
         title="Find Trusted Pool Professionals Near You"
         subtitle="Get free quotes from licensed pool contractors for installation, repair, cleaning, and more."
@@ -94,5 +108,6 @@ export default function Home() {
 
       <ContactForm />
     </div>
+    </>
   );
 }

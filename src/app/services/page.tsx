@@ -1,5 +1,11 @@
 import Link from "next/link";
 import { SERVICES } from "@/data/locations";
+import {
+  generateOrganizationSchema,
+  generateWebsiteSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/seo";
+import JSONLDScript from "@/components/JSONLDScript";
 import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
 import type { Metadata } from "next";
@@ -11,8 +17,16 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebsiteSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema();
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <JSONLDScript
+        data={[organizationSchema, websiteSchema, breadcrumbSchema]}
+      />
+      <div className="min-h-screen bg-white">
       <Hero
         title="Pool Services"
         subtitle="Browse our pool services and get quotes from trusted professionals"
@@ -40,5 +54,6 @@ export default function ServicesPage() {
         <ContactForm />
       </main>
     </div>
+    </>
   );
 }

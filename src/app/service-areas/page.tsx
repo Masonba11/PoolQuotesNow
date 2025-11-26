@@ -1,5 +1,11 @@
 import Link from "next/link";
 import { STATES } from "@/data/locations";
+import {
+  generateOrganizationSchema,
+  generateWebsiteSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/seo";
+import JSONLDScript from "@/components/JSONLDScript";
 import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
 import type { Metadata } from "next";
@@ -11,8 +17,16 @@ export const metadata: Metadata = {
 };
 
 export default function ServiceAreasPage() {
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebsiteSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema();
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <JSONLDScript
+        data={[organizationSchema, websiteSchema, breadcrumbSchema]}
+      />
+      <div className="min-h-screen bg-white">
       <Hero
         title="Our Service Areas"
         subtitle="We connect you with trusted pool professionals in cities across Florida, Texas, California, Arizona, and Nevada"
@@ -61,5 +75,6 @@ export default function ServiceAreasPage() {
         <ContactForm />
       </main>
     </div>
+    </>
   );
 }

@@ -1,3 +1,9 @@
+import {
+  generateOrganizationSchema,
+  generateWebsiteSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/seo";
+import JSONLDScript from "@/components/JSONLDScript";
 import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
 import type { Metadata } from "next";
@@ -60,8 +66,16 @@ export default function ReviewsPage() {
     },
   ];
 
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebsiteSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema();
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <JSONLDScript
+        data={[organizationSchema, websiteSchema, breadcrumbSchema]}
+      />
+      <div className="min-h-screen bg-white">
       <Hero
         title="Customer Reviews"
         subtitle="See what our customers say about the pool professionals they found through PoolQuotesNow"
@@ -119,5 +133,6 @@ export default function ReviewsPage() {
         <ContactForm />
       </main>
     </div>
+    </>
   );
 }
