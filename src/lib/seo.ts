@@ -5,6 +5,7 @@ import {
   getCityBySlug,
   getServiceBySlug,
 } from "@/data/locations";
+import { getStateGeo, getCityGeo } from "@/data/geo";
 import type { Metadata } from "next";
 
 export function generateStateMetadata(stateSlug: string): Metadata {
@@ -157,15 +158,25 @@ export function generateServiceSchema(
 
   if (!state || !city || !service) return null;
 
+  const cityGeo = getCityGeo(state.name, city.name);
+  const areaServed: any = {
+    "@type": "City",
+    name: city.name,
+  };
+
+  if (cityGeo) {
+    areaServed.geo = {
+      "@type": "Place",
+      latitude: cityGeo.lat,
+      longitude: cityGeo.lng,
+    };
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: service.name,
-    areaServed: {
-      "@type": "City",
-      name: city.name,
-      addressRegion: state.abbreviation,
-    },
+    areaServed,
     provider: {
       "@type": "Organization",
       name: "PoolQuotesNow",
@@ -178,7 +189,7 @@ export function generateFAQSchema(
   faqs: Array<{ question: string; answer: string }>
 ) {
   if (!faqs || faqs.length === 0) return null;
-  
+
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -198,43 +209,62 @@ export function generateStatePageSchema(stateSlug: string) {
   const state = getStateBySlug(stateSlug);
   if (!state) return null;
 
+  const stateGeo = getStateGeo(state.name);
+  const areaServed: any = {
+    "@type": "State",
+    name: state.name,
+  };
+
+  if (stateGeo) {
+    areaServed.geo = {
+      "@type": "Place",
+      latitude: stateGeo.lat,
+      longitude: stateGeo.lng,
+    };
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: "Pool Services",
-    areaServed: {
-      "@type": "State",
-      name: state.name,
-      addressRegion: state.abbreviation,
-    },
+    areaServed,
     provider: {
       "@type": "Organization",
       name: "PoolQuotesNow",
+      url: "https://poolquotesnow.com",
     },
   };
 }
 
 // City Page Schema
-export function generateCityPageSchema(
-  stateSlug: string,
-  citySlug: string
-) {
+export function generateCityPageSchema(stateSlug: string, citySlug: string) {
   const state = getStateBySlug(stateSlug);
   const city = getCityBySlug(stateSlug, citySlug);
   if (!state || !city) return null;
+
+  const cityGeo = getCityGeo(state.name, city.name);
+  const areaServed: any = {
+    "@type": "City",
+    name: city.name,
+  };
+
+  if (cityGeo) {
+    areaServed.geo = {
+      "@type": "Place",
+      latitude: cityGeo.lat,
+      longitude: cityGeo.lng,
+    };
+  }
 
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: "Pool Services",
-    areaServed: {
-      "@type": "City",
-      name: city.name,
-      addressRegion: state.abbreviation,
-    },
+    areaServed,
     provider: {
       "@type": "Organization",
       name: "PoolQuotesNow",
+      url: "https://poolquotesnow.com",
     },
   };
 }

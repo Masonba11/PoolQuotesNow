@@ -29,4 +29,3 @@ export default function PageSchemas({
 
   return <JSONLDScript data={schemas} />;
 }
-
