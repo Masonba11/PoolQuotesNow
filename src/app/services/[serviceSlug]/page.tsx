@@ -76,7 +76,7 @@ export default async function ServicePage({
       question: `What is ${service.name.toLowerCase()}?`,
       answer: `${
         service.description
-      }. Our network of trusted pool professionals provides expert ${service.name.toLowerCase()} services across the United States.`,
+      }. Our network of trusted pool professionals provides expert ${service.name.toLowerCase()} services in Florida, Texas, California, Arizona, and Nevada.`,
     },
     {
       question: `How much does ${service.name.toLowerCase()} cost?`,
@@ -148,12 +148,12 @@ export default async function ServicePage({
               Find {service.name} in Your Area
             </h2>
             <p className="text-gray-600 mb-6">
-              We have pool professionals available in cities across 30 states.
+              We have pool professionals available in cities across 5 states.
               Browse by state to find {service.name.toLowerCase()} services near
               you:
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {STATES.slice(0, 10).map((state) => (
+              {STATES.map((state) => (
                 <Link
                   key={state.slug}
                   href={`/${state.slug}/${state.cities[0].slug}/${service.slug}`}

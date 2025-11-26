@@ -15,6 +15,7 @@ import {
   generateFAQSchema,
 } from "@/lib/seo";
 import { generateServiceInCityContent } from "@/lib/content";
+import { getArticlesByState } from "@/data/articleContent";
 import JSONLDScript from "@/components/JSONLDScript";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
@@ -259,6 +260,43 @@ export default async function ServicePage({
 
           {/* FAQs */}
           <FAQ faqs={content.faqs} />
+
+          {/* Blog Articles */}
+          {(() => {
+            const articles = getArticlesByState(stateSlug);
+            if (articles.length > 0) {
+              return (
+                <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                    Pool Guides & Resources for {state.name}
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {articles.map((article) => (
+                      <Link
+                        key={article.slug}
+                        href={`/blog/${stateSlug}/${article.slug}`}
+                        className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-aqua-pool-500 group"
+                      >
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-aqua-pool-500 transition-colors">
+                          {article.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm mb-4">
+                          {article.metaDescription}
+                        </p>
+                        <span
+                          className="font-semibold hover:opacity-80 text-sm"
+                          style={{ color: "#14B8A6" }}
+                        >
+                          Read Article →
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              );
+            }
+            return null;
+          })()}
 
           {/* Final CTA */}
           <section

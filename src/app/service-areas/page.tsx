@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Service Areas - PoolQuotesNow",
   description:
-    "Find pool services in cities across 30 states. Browse our service areas to find trusted pool professionals near you.",
+    "Find pool services in cities across 5 states. Browse our service areas to find trusted pool professionals near you.",
 };
 
 export default function ServiceAreasPage() {
@@ -15,7 +15,7 @@ export default function ServiceAreasPage() {
     <div className="min-h-screen bg-white">
       <Hero
         title="Our Service Areas"
-        subtitle="We connect you with trusted pool professionals in cities across the United States"
+        subtitle="We connect you with trusted pool professionals in cities across Florida, Texas, California, Arizona, and Nevada"
         showCTAs={false}
       />
 
