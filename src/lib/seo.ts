@@ -166,7 +166,7 @@ export function generateServiceSchema(
 
   if (cityGeo) {
     areaServed.geo = {
-      "@type": "Place",
+      "@type": "GeoCoordinates",
       latitude: cityGeo.lat,
       longitude: cityGeo.lng,
     };
@@ -217,7 +217,7 @@ export function generateStatePageSchema(stateSlug: string) {
 
   if (stateGeo) {
     areaServed.geo = {
-      "@type": "Place",
+      "@type": "GeoCoordinates",
       latitude: stateGeo.lat,
       longitude: stateGeo.lng,
     };
@@ -250,7 +250,7 @@ export function generateCityPageSchema(stateSlug: string, citySlug: string) {
 
   if (cityGeo) {
     areaServed.geo = {
-      "@type": "Place",
+      "@type": "GeoCoordinates",
       latitude: cityGeo.lat,
       longitude: cityGeo.lng,
     };
