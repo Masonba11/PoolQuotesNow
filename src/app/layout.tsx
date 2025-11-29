@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "PoolQuotesNow - Find Pool Services Near You",
   description:
-    "Get quotes from trusted pool professionals for installation, repair, cleaning, resurfacing, and remodeling services.",
+    "Get quotes from trusted pool professionals for Pool builder, repair, cleaning, resurfacing, and remodeling services.",
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",

@@ -152,7 +152,7 @@ export default function ContactForm() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aqua-pool-500 focus:border-aqua-pool-500 text-gray-900"
                 >
                   <option value="">Select a service</option>
-                  <option value="Pool Installation">Pool Installation</option>
+                  <option value="Pool builder">Pool builder</option>
                   <option value="Pool Repair">Pool Repair</option>
                   <option value="Pool Cleaning">Pool Cleaning</option>
                   <option value="Pool Resurfacing">Pool Resurfacing</option>

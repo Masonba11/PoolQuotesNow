@@ -27,7 +27,7 @@ A national pool services lead generation site built with Next.js 14, TypeScript,
 
 ## Services
 
-1. Pool Installation
+1. Pool builder
 2. Pool Repair
 3. Pool Cleaning
 4. Pool Resurfacing

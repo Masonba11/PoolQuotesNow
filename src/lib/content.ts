@@ -134,7 +134,7 @@ function generateBenefits(
 ): string[] {
   return [
     `Faster response times: Local ${cityName} pool contractors can typically respond to service requests within 24-48 hours, and many offer same-day emergency services for urgent repairs.`,
-    `Local expertise: Pool professionals in ${cityName} understand ${stateAbbrev}'s building codes, permit requirements, and climate-specific challenges that affect pool maintenance and installation.`,
+    `Local expertise: Pool professionals in ${cityName} understand ${stateAbbrev}'s building codes, permit requirements, and climate-specific challenges that affect pool maintenance and Pool builder.`,
     `Accurate pricing: Contractors familiar with ${cityName}'s market can provide realistic cost estimates based on local material costs, labor rates, and project complexity.`,
     `Established relationships: Many local pool pros in ${cityName} have long-standing relationships with suppliers, which can lead to better pricing and faster material delivery.`,
     `Community knowledge: Local contractors know ${cityName}'s neighborhoods, common pool styles, and can provide recommendations based on what works well in similar homes nearby.`,
@@ -147,10 +147,10 @@ function generateCommonProjects(
   serviceLower: string
 ): string[] {
   const projects: Record<string, string[]> = {
-    "Pool Installation": [
-      `In-ground pool installations for ${cityName} homes with custom designs`,
-      `Fiberglass pool installations with professional excavation and setup`,
-      `Vinyl liner pool installations tailored to ${cityName} homeowners' preferences`,
+    "Pool builder": [
+      `In-ground pool builders for ${cityName} homes with custom designs`,
+      `Fiberglass pool builders with professional excavation and setup`,
+      `Vinyl liner pool builders tailored to ${cityName} homeowners' preferences`,
       `Concrete pool construction with custom features like waterfalls or spas`,
       `Pool decking and surrounding landscape integration`,
       `Pool equipment installation including pumps, filters, and heaters`,
@@ -222,7 +222,7 @@ function generateAverageCosts(
     "Pool Repair": `Pool repair costs in ${cityName} vary widely based on the issue, ranging from $200 for minor repairs like replacing a pool light to $2,500 or more for major equipment replacements or structural repairs. Common repairs like pump replacement typically cost $400 to $1,200, while plumbing repairs may range from $300 to $1,500.`,
     "Pool Resurfacing": `Pool resurfacing in ${cityName} generally costs between $5,000 and $15,000, depending on pool size, surface material choice, and any additional work needed. Basic plaster resurfacing starts around $5,000, while premium finishes like pebble or quartz can cost $8,000 to $15,000 or more.`,
     "Pool Remodeling": `Pool remodeling projects in ${cityName} typically range from $10,000 for smaller updates to $60,000 or more for complete transformations. Basic remodels with new finishes and minor feature additions often cost $10,000 to $25,000, while extensive renovations with new features, decking, and landscaping can exceed $50,000.`,
-    "Pool Installation": `New pool installation in ${cityName} typically starts around $40,000 for basic in-ground pools and can exceed $100,000 for custom designs with premium features. Fiberglass pools generally range from $40,000 to $75,000, while concrete pools typically cost $50,000 to $100,000 or more depending on size and features.`,
+    "Pool builder": `New pool builder in ${cityName} typically starts around $40,000 for basic in-ground pools and can exceed $100,000 for custom designs with premium features. Fiberglass pools generally range from $40,000 to $75,000, while concrete pools typically cost $50,000 to $100,000 or more depending on size and features.`,
   };
 
   return (
@@ -244,11 +244,11 @@ function generateServiceFAQs(
     },
     {
       question: `How long does ${serviceLower} take in ${cityName}?`,
-      answer: `Timelines for ${serviceLower} in ${cityName} depend on the project scope. Simple repairs may take a few hours, while installations or major remodels can take several weeks. ${cityName} pool contractors will provide detailed timelines during your consultation, accounting for weather, permit processing, and material delivery. Most ${cityName} professionals work efficiently to minimize disruption to your pool use.`,
+      answer: `Timelines for ${serviceLower} in ${cityName} depend on the project scope. Simple repairs may take a few hours, while Pool builders or major remodels can take several weeks. ${cityName} pool contractors will provide detailed timelines during your consultation, accounting for weather, permit processing, and material delivery. Most ${cityName} professionals work efficiently to minimize disruption to your pool use.`,
     },
     {
       question: `Do I need permits for ${serviceLower} in ${cityName}?`,
-      answer: `Permit requirements for ${serviceLower} in ${cityName} vary by project type. Major installations, structural changes, and electrical work typically require permits from ${cityName} or ${stateAbbrev} authorities. Licensed pool contractors in ${cityName} are familiar with local regulations and will handle all necessary permit applications and inspections as part of their service.`,
+      answer: `Permit requirements for ${serviceLower} in ${cityName} vary by project type. Major Pool builders, structural changes, and electrical work typically require permits from ${cityName} or ${stateAbbrev} authorities. Licensed pool contractors in ${cityName} are familiar with local regulations and will handle all necessary permit applications and inspections as part of their service.`,
     },
     {
       question: `What should I look for in a ${serviceLower} professional in ${cityName}?`,
@@ -308,22 +308,22 @@ function generateCityIntro(
 
   const climate = climateNotes[stateSlug] || "favorable weather";
 
-  return `${cityName}, ${stateAbbrev} is home to thousands of pool owners who rely on professional pool services to keep their backyards beautiful and functional. With ${cityName}'s ${climate}, pools are a central feature of many homes, providing families with year-round recreation and entertainment. Whether you're maintaining an existing pool, planning renovations, or considering a new installation, ${cityName} homeowners have access to a network of trusted local pool professionals. These experts understand the unique demands of pool ownership in ${stateAbbrev} and can help with everything from routine cleaning to major installations. Our service connects ${cityName} residents with licensed, insured pool contractors who deliver quality workmanship and reliable service throughout the ${cityName} area.`;
+  return `${cityName}, ${stateAbbrev} is home to thousands of pool owners who rely on professional pool services to keep their backyards beautiful and functional. With ${cityName}'s ${climate}, pools are a central feature of many homes, providing families with year-round recreation and entertainment. Whether you're maintaining an existing pool, planning renovations, or considering a new Pool builder, ${cityName} homeowners have access to a network of trusted local pool professionals. These experts understand the unique demands of pool ownership in ${stateAbbrev} and can help with everything from routine cleaning to major Pool builders. Our service connects ${cityName} residents with licensed, insured pool contractors who deliver quality workmanship and reliable service throughout the ${cityName} area.`;
 }
 
 function generatePopularServices(
   cityName: string,
   stateAbbrev: string
 ): string {
-  return `Homeowners in ${cityName} rely on five core pool services to maintain and enhance their backyard investments. Pool installation services help ${cityName} families create their dream outdoor spaces with custom-designed pools. Pool repair services address everything from equipment malfunctions to structural issues, keeping ${cityName} pools safe and operational. Regular pool cleaning ensures water quality and extends equipment life, essential for ${cityName}'s active pool season. Pool resurfacing restores worn surfaces and gives ${cityName} pools a fresh, updated look. Finally, pool remodeling transforms existing pools with new features, finishes, and modern amenities that ${cityName} homeowners love. Each service is available from qualified professionals who understand ${cityName}'s local market and climate-specific needs.`;
+  return `Homeowners in ${cityName} rely on five core pool services to maintain and enhance their backyard investments. Pool builder services help ${cityName} families create their dream outdoor spaces with custom-designed pools. Pool repair services address everything from equipment malfunctions to structural issues, keeping ${cityName} pools safe and operational. Regular pool cleaning ensures water quality and extends equipment life, essential for ${cityName}'s active pool season. Pool resurfacing restores worn surfaces and gives ${cityName} pools a fresh, updated look. Finally, pool remodeling transforms existing pools with new features, finishes, and modern amenities that ${cityName} homeowners love. Each service is available from qualified professionals who understand ${cityName}'s local market and climate-specific needs.`;
 }
 
 function generateWhyLocal(cityName: string, stateAbbrev: string): string {
-  return `${cityName} homeowners choose local pool professionals for several key advantages. Local contractors can respond quickly to service requests, often within 24-48 hours, which is crucial for urgent repairs or seasonal maintenance needs. They understand ${cityName}'s building codes, permit processes, and local regulations, ensuring projects comply with all requirements. ${cityName} pool pros also have established relationships with local suppliers, which can lead to better pricing and faster material delivery. Additionally, local contractors are familiar with ${cityName}'s climate patterns, common pool styles in the area, and neighborhood-specific considerations that affect pool maintenance and installation. This local knowledge translates to more accurate estimates, appropriate material choices, and solutions tailored to ${cityName}'s unique conditions.`;
+  return `${cityName} homeowners choose local pool professionals for several key advantages. Local contractors can respond quickly to service requests, often within 24-48 hours, which is crucial for urgent repairs or seasonal maintenance needs. They understand ${cityName}'s building codes, permit processes, and local regulations, ensuring projects comply with all requirements. ${cityName} pool pros also have established relationships with local suppliers, which can lead to better pricing and faster material delivery. Additionally, local contractors are familiar with ${cityName}'s climate patterns, common pool styles in the area, and neighborhood-specific considerations that affect pool maintenance and Pool builder. This local knowledge translates to more accurate estimates, appropriate material choices, and solutions tailored to ${cityName}'s unique conditions.`;
 }
 
 function generateTrends(cityName: string, stateAbbrev: string): string {
-  return `Pool trends in ${cityName}, ${stateAbbrev} reflect homeowners' desire for both functionality and style. Many ${cityName} residents are upgrading older pools with modern features like LED lighting, automation systems, and energy-efficient equipment. There's growing interest in saltwater pool conversions, which reduce chemical maintenance for ${cityName} pool owners. Backyard transformations that integrate pools with outdoor kitchens, fire features, and expanded decking are popular in ${cityName} neighborhoods. Additionally, ${cityName} homeowners are investing in pool resurfacing with premium finishes like pebble or quartz, which offer durability and aesthetic appeal. As ${cityName} continues to grow, new pool installations remain strong, with many homeowners choosing custom designs that complement their home's architecture and landscape.`;
+  return `Pool trends in ${cityName}, ${stateAbbrev} reflect homeowners' desire for both functionality and style. Many ${cityName} residents are upgrading older pools with modern features like LED lighting, automation systems, and energy-efficient equipment. There's growing interest in saltwater pool conversions, which reduce chemical maintenance for ${cityName} pool owners. Backyard transformations that integrate pools with outdoor kitchens, fire features, and expanded decking are popular in ${cityName} neighborhoods. Additionally, ${cityName} homeowners are investing in pool resurfacing with premium finishes like pebble or quartz, which offer durability and aesthetic appeal. As ${cityName} continues to grow, new pool builders remain strong, with many homeowners choosing custom designs that complement their home's architecture and landscape.`;
 }
 
 function generateFreeQuotes(cityName: string, stateAbbrev: string): string {
@@ -337,11 +337,11 @@ function generateCityFAQs(
   return [
     {
       question: `What pool services are available in ${cityName}, ${stateAbbrev}?`,
-      answer: `${cityName} homeowners have access to all major pool services including installation, repair, cleaning, resurfacing, and remodeling. Our network connects ${cityName} residents with licensed professionals who specialize in each service type, ensuring quality workmanship for every project.`,
+      answer: `${cityName} homeowners have access to all major pool services including Pool builder, repair, cleaning, resurfacing, and remodeling. Our network connects ${cityName} residents with licensed professionals who specialize in each service type, ensuring quality workmanship for every project.`,
     },
     {
       question: `How quickly can I get pool service in ${cityName}?`,
-      answer: `Most ${cityName} pool professionals can respond to service requests within 24-48 hours. Emergency repairs may be available same-day depending on contractor availability. For scheduled services like installations or remodels, ${cityName} contractors typically book 2-4 weeks in advance during peak season.`,
+      answer: `Most ${cityName} pool professionals can respond to service requests within 24-48 hours. Emergency repairs may be available same-day depending on contractor availability. For scheduled services like Pool builders or remodels, ${cityName} contractors typically book 2-4 weeks in advance during peak season.`,
     },
     {
       question: `Do pool contractors in ${cityName} handle permits?`,
@@ -349,7 +349,7 @@ function generateCityFAQs(
     },
     {
       question: `How much do pool services cost in ${cityName}?`,
-      answer: `Pool service costs in ${cityName} vary by service type and project scope. Basic cleaning services typically range from $80-$200 per visit, while major installations can cost $40,000 or more. ${cityName} pool professionals provide free estimates so you can get accurate pricing for your specific project.`,
+      answer: `Pool service costs in ${cityName} vary by service type and project scope. Basic cleaning services typically range from $80-$200 per visit, while major Pool builders can cost $40,000 or more. ${cityName} pool professionals provide free estimates so you can get accurate pricing for your specific project.`,
     },
   ];
 }
@@ -393,19 +393,19 @@ function generateStateIntro(
 
   const climate = climateNotes[stateSlug] || "favorable conditions";
 
-  return `${stateName} is home to one of the nation's largest and most active pool markets, with thousands of homeowners enjoying the benefits of pool ownership. ${stateName}'s ${climate} make pools a popular feature in residential properties across the state. From major metropolitan areas to suburban communities, ${stateAbbrev} residents invest in pools for recreation, relaxation, and increased property value. This strong demand has created a robust network of pool professionals throughout ${stateName}, offering everything from routine maintenance to complete pool installations. Whether you're in a bustling city or a quiet suburb, ${stateAbbrev} homeowners have access to qualified pool contractors who understand the state's unique climate, building codes, and pool ownership trends.`;
+  return `${stateName} is home to one of the nation's largest and most active pool markets, with thousands of homeowners enjoying the benefits of pool ownership. ${stateName}'s ${climate} make pools a popular feature in residential properties across the state. From major metropolitan areas to suburban communities, ${stateAbbrev} residents invest in pools for recreation, relaxation, and increased property value. This strong demand has created a robust network of pool professionals throughout ${stateName}, offering everything from routine maintenance to complete pool builders. Whether you're in a bustling city or a quiet suburb, ${stateAbbrev} homeowners have access to qualified pool contractors who understand the state's unique climate, building codes, and pool ownership trends.`;
 }
 
 function generateTopAreas(state: any): string {
   const cities = state.cities.map((c: any) => c.name).join(", ");
-  return `Pool services are available throughout ${state.name}, with particularly strong contractor networks in major metropolitan areas and growing suburbs. Top service areas in ${state.name} include ${cities}. Each of these cities has established pool professional networks serving local homeowners with installation, repair, cleaning, resurfacing, and remodeling services. Whether you're in a major ${state.name} city or surrounding communities, qualified pool contractors are ready to help with your project.`;
+  return `Pool services are available throughout ${state.name}, with particularly strong contractor networks in major metropolitan areas and growing suburbs. Top service areas in ${state.name} include ${cities}. Each of these cities has established pool professional networks serving local homeowners with Pool builder, repair, cleaning, resurfacing, and remodeling services. Whether you're in a major ${state.name} city or surrounding communities, qualified pool contractors are ready to help with your project.`;
 }
 
 function generateStatePopularServices(
   stateName: string,
   stateAbbrev: string
 ): string {
-  return `${stateName} homeowners rely on five core pool services to maintain and enhance their investments. Pool installation services help ${stateAbbrev} families create custom outdoor spaces with professionally designed pools. Pool repair services address equipment issues, structural problems, and maintenance needs across ${stateName}. Regular pool cleaning ensures water quality and equipment longevity, essential for ${stateName}'s active pool season. Pool resurfacing restores worn surfaces and gives ${stateAbbrev} pools fresh, updated appearances. Pool remodeling transforms existing pools with modern features, finishes, and amenities that ${stateName} homeowners value. Each service is available from licensed professionals throughout ${stateName} who understand the state's climate and pool ownership needs.`;
+  return `${stateName} homeowners rely on five core pool services to maintain and enhance their investments. Pool builder services help ${stateAbbrev} families create custom outdoor spaces with professionally designed pools. Pool repair services address equipment issues, structural problems, and maintenance needs across ${stateName}. Regular pool cleaning ensures water quality and equipment longevity, essential for ${stateName}'s active pool season. Pool resurfacing restores worn surfaces and gives ${stateAbbrev} pools fresh, updated appearances. Pool remodeling transforms existing pools with modern features, finishes, and amenities that ${stateName} homeowners value. Each service is available from licensed professionals throughout ${stateName} who understand the state's climate and pool ownership needs.`;
 }
 
 function generateWhyPopular(
@@ -419,7 +419,7 @@ function generateWhyPopular(
     california:
       "favorable climate allows extended pool seasons, and California's emphasis on outdoor living makes pools a natural fit for many homes",
     texas:
-      "long, hot summers create strong demand for pool cooling and recreation, while Texas's growing population drives new pool installations",
+      "long, hot summers create strong demand for pool cooling and recreation, while Texas's growing population drives new pool builders",
     arizona:
       "desert climate with intense heat makes pools essential for cooling and comfort, while Arizona's outdoor lifestyle supports strong pool culture",
     nevada:
@@ -430,7 +430,7 @@ function generateWhyPopular(
     reasons[stateSlug] ||
     `${stateName}'s climate and lifestyle make pools popular features for homeowners`;
 
-  return `Pool projects are popular in ${stateName} for several compelling reasons. ${reason}. Additionally, ${stateAbbrev} homeowners recognize that well-maintained pools add significant property value and create attractive outdoor living spaces. The state's building industry supports pool construction with established contractor networks, reliable suppliers, and streamlined permit processes. Many ${stateName} neighborhoods feature pools as standard amenities, creating a competitive market where homeowners invest in quality installations and regular maintenance. Whether it's a new pool for a growing family, a renovation to modernize an older pool, or routine maintenance to protect an investment, ${stateAbbrev} homeowners understand the value of professional pool services.`;
+  return `Pool projects are popular in ${stateName} for several compelling reasons. ${reason}. Additionally, ${stateAbbrev} homeowners recognize that well-maintained pools add significant property value and create attractive outdoor living spaces. The state's building industry supports pool construction with established contractor networks, reliable suppliers, and streamlined permit processes. Many ${stateName} neighborhoods feature pools as standard amenities, creating a competitive market where homeowners invest in quality Pool builders and regular maintenance. Whether it's a new pool for a growing family, a renovation to modernize an older pool, or routine maintenance to protect an investment, ${stateAbbrev} homeowners understand the value of professional pool services.`;
 }
 
 function generateStateFreeQuotes(
@@ -447,23 +447,23 @@ function generateStateFAQs(
   return [
     {
       question: `What pool services are available throughout ${stateName}?`,
-      answer: `All major pool services are available across ${stateName}, including installation, repair, cleaning, resurfacing, and remodeling. ${stateAbbrev} homeowners can find qualified professionals in major cities and surrounding communities, each offering specialized expertise in their service area.`,
+      answer: `All major pool services are available across ${stateName}, including Pool builder, repair, cleaning, resurfacing, and remodeling. ${stateAbbrev} homeowners can find qualified professionals in major cities and surrounding communities, each offering specialized expertise in their service area.`,
     },
     {
       question: `How long do pool projects typically take in ${stateName}?`,
-      answer: `Project timelines in ${stateName} vary by service type. Simple repairs may take a few hours, while installations or major remodels typically require 4-12 weeks depending on complexity, permits, and weather conditions. ${stateAbbrev} pool contractors provide detailed timelines during consultations.`,
+      answer: `Project timelines in ${stateName} vary by service type. Simple repairs may take a few hours, while Pool builders or major remodels typically require 4-12 weeks depending on complexity, permits, and weather conditions. ${stateAbbrev} pool contractors provide detailed timelines during consultations.`,
     },
     {
       question: `What do pool services cost in ${stateName}?`,
-      answer: `Pool service costs in ${stateName} vary by service type and project scope. Basic cleaning services typically range from $80-$200 per visit, while new pool installations generally start around $40,000. ${stateAbbrev} pool professionals provide free estimates for accurate pricing based on your specific project needs.`,
+      answer: `Pool service costs in ${stateName} vary by service type and project scope. Basic cleaning services typically range from $80-$200 per visit, while new pool builders generally start around $40,000. ${stateAbbrev} pool professionals provide free estimates for accurate pricing based on your specific project needs.`,
     },
     {
       question: `Do I need permits for pool work in ${stateName}?`,
-      answer: `Permit requirements in ${stateName} vary by project type and location. Major installations, structural changes, and electrical work typically require permits. Licensed ${stateAbbrev} pool contractors are familiar with local and state regulations and handle all necessary permit applications as part of their service.`,
+      answer: `Permit requirements in ${stateName} vary by project type and location. Major Pool builders, structural changes, and electrical work typically require permits. Licensed ${stateAbbrev} pool contractors are familiar with local and state regulations and handle all necessary permit applications as part of their service.`,
     },
   ];
 }
 
 function generateStateFinalCTA(stateName: string, stateAbbrev: string): string {
-  return `Whether you're planning a new pool installation, need repairs, or want to upgrade your existing pool, ${stateName} pool professionals are ready to help. Our network connects ${stateAbbrev} homeowners with trusted local experts who understand the state's unique climate, building codes, and pool ownership needs. Browse our city pages to find pool services in your specific ${stateName} location, or submit a quote request to get matched with qualified professionals in your area. Compare pricing, timelines, and service approaches from multiple contractors—all with no obligation. Take the first step toward your perfect pool project in ${stateName}.`;
+  return `Whether you're planning a new pool builder, need repairs, or want to upgrade your existing pool, ${stateName} pool professionals are ready to help. Our network connects ${stateAbbrev} homeowners with trusted local experts who understand the state's unique climate, building codes, and pool ownership needs. Browse our city pages to find pool services in your specific ${stateName} location, or submit a quote request to get matched with qualified professionals in your area. Compare pricing, timelines, and service approaches from multiple contractors—all with no obligation. Take the first step toward your perfect pool project in ${stateName}.`;
 }

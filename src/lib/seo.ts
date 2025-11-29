@@ -19,7 +19,7 @@ export function generateStateMetadata(stateSlug: string): Metadata {
 
   return {
     title: `Pool Services in ${state.name} - PoolQuotesNow`,
-    description: `Find trusted pool professionals in ${state.name}. Get quotes for pool installation, repair, cleaning, resurfacing, and remodeling services in ${state.name}.`,
+    description: `Find trusted pool professionals in ${state.name}. Get quotes for Pool builder, repair, cleaning, resurfacing, and remodeling services in ${state.name}.`,
   };
 }
 
@@ -39,7 +39,7 @@ export function generateCityMetadata(
 
   return {
     title: `Pool Services in ${city.name}, ${state.abbreviation} - PoolQuotesNow`,
-    description: `Find trusted pool professionals in ${city.name}, ${state.name}. Get quotes for pool installation, repair, cleaning, resurfacing, and remodeling services.`,
+    description: `Find trusted pool professionals in ${city.name}, ${state.name}. Get quotes for Pool builder, repair, cleaning, resurfacing, and remodeling services.`,
   };
 }
 
@@ -128,7 +128,7 @@ export function generateOrganizationSchema() {
     url: "https://poolquotesnow.com",
     logo: "https://poolquotesnow.com/logo.png",
     description:
-      "PoolQuotesNow connects homeowners with trusted pool professionals for installation, repair, cleaning, resurfacing, and remodeling services.",
+      "PoolQuotesNow connects homeowners with trusted pool professionals for Pool builder, repair, cleaning, resurfacing, and remodeling services.",
     sameAs: [],
   };
 }

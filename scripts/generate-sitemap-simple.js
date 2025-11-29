@@ -132,7 +132,7 @@ const STATES = [
 ];
 
 const SERVICES = [
-  { slug: "pool-installation" },
+  { slug: "pool-builder" },
   { slug: "pool-repair" },
   { slug: "pool-cleaning" },
   { slug: "pool-resurfacing" },

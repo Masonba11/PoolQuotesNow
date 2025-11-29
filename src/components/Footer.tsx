@@ -10,7 +10,7 @@ export default function Footer() {
               PoolQuotesNow
             </h3>
             <p className="text-white/90 mb-4">
-              Find trusted pool professionals for installation, repair,
+              Find trusted pool professionals for Pool builder, repair,
               cleaning, resurfacing, and remodeling services across the United
               States.
             </p>
@@ -77,10 +77,10 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/services#pool-installation"
+                  href="/services#pool-builder"
                   className="text-white/90 hover:text-white transition-colors"
                 >
-                  Pool Installation
+                  Pool builder
                 </Link>
               </li>
               <li>

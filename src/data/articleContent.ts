@@ -327,7 +327,7 @@ const articleDefinitions: Record<
               {
                 h2: "Statewide Permit Requirements",
                 content:
-                  "Florida requires permits for all new pool installations, major remodels, and structural repairs. Electrical and plumbing work also requires separate permits in most jurisdictions.",
+                  "Florida requires permits for all new pool builders, major remodels, and structural repairs. Electrical and plumbing work also requires separate permits in most jurisdictions.",
               },
               {
                 h2: "Coastal City Regulations",
@@ -349,7 +349,7 @@ const articleDefinitions: Record<
               {
                 question: "Do I need a permit to install a pool in Florida?",
                 answer:
-                  "Yes, Florida requires permits for all new pool installations. Contact your local building department to determine specific requirements for your area.",
+                  "Yes, Florida requires permits for all new pool builders. Contact your local building department to determine specific requirements for your area.",
               },
               {
                 question: "What safety barriers are required in Florida?",
@@ -463,7 +463,7 @@ const articleDefinitions: Record<
               {
                 h2: "Installation Costs",
                 content:
-                  "Pool installation in Florida ranges from $40,000–$80,000 for standard in-ground pools. Premium features, custom designs, and difficult site conditions can increase costs significantly.",
+                  "Pool builder in Florida ranges from $40,000–$80,000 for standard in-ground pools. Premium features, custom designs, and difficult site conditions can increase costs significantly.",
               },
               {
                 h2: "Resurfacing Costs",
@@ -485,7 +485,7 @@ const articleDefinitions: Record<
               {
                 question: "How much does a pool cost in Florida?",
                 answer:
-                  "Standard pool installation costs $40,000-80,000 in Florida. Premium features, custom designs, and site conditions can increase costs significantly.",
+                  "Standard pool builder costs $40,000-80,000 in Florida. Premium features, custom designs, and site conditions can increase costs significantly.",
               },
               {
                 question: "Why are pool costs higher in Miami and Naples?",
@@ -594,25 +594,25 @@ const articleDefinitions: Record<
       },
     },
     {
-      slug: "pool-installation-trends-texas-suburbs",
+      slug: "pool-builder-trends-texas-suburbs",
       title:
-        "Pool Installation Trends in Texas Suburbs: Why Backyard Pools Are Booming",
-      metaTitle: "Texas Pool Installation Trends 2025",
+        "Pool builder Trends in Texas Suburbs: Why Backyard Pools Are Booming",
+      metaTitle: "Texas Pool builder Trends 2025",
       metaDescription:
-        "Discover why pool installations are booming in Texas suburbs and what homeowners are choosing in 2025.",
+        "Discover why pool builders are booming in Texas suburbs and what homeowners are choosing in 2025.",
       contentGenerator: (stateSlug, stateName, cities, services) => {
         return createArticleContent(
           stateSlug,
           stateName,
           {
-            h1: "Pool Installation Trends in Texas Suburbs: Why Backyard Pools Are Booming",
+            h1: "Pool builder Trends in Texas Suburbs: Why Backyard Pools Are Booming",
             intro:
               "Texas has become one of America's fastest-growing pool markets. Rapid suburban growth in cities like Frisco, McKinney, Round Rock, and Katy has turned backyard pools into a top lifestyle feature. Larger lot sizes, hot summers, and rising home values have made pools a major selling point across Texas communities.",
             sections: [
               {
                 h2: "Why Texas Suburbs Lead the Boom",
                 content:
-                  "Texas suburbs offer more space for backyard builds, long swim seasons, rising homebuyer demand, and HOA-friendly designs in new developments. Austin, Dallas-Fort Worth, and Houston suburbs now rank among the highest pool-installation regions in the country.",
+                  "Texas suburbs offer more space for backyard builds, long swim seasons, rising homebuyer demand, and HOA-friendly designs in new developments. Austin, Dallas-Fort Worth, and Houston suburbs now rank among the highest pool-builder regions in the country.",
               },
               {
                 h2: "Trending Features in 2025",
@@ -647,7 +647,7 @@ const articleDefinitions: Record<
                   "Yes, pools are a major selling point in Texas real estate markets, especially in suburban communities with hot summers.",
               },
               {
-                question: "How long does pool installation take in Texas?",
+                question: "How long does pool builder take in Texas?",
                 answer:
                   "Typical installations take 6-12 weeks depending on permits, weather, and complexity. Spring and fall are peak installation seasons.",
               },
@@ -678,7 +678,7 @@ const articleDefinitions: Record<
               {
                 h2: "Permit Requirements",
                 content:
-                  "Most Texas cities require permits for in-ground pool installations, major remodels, and structural changes. Permit requirements vary by city, so check with your local building department.",
+                  "Most Texas cities require permits for in-ground pool builders, major remodels, and structural changes. Permit requirements vary by city, so check with your local building department.",
               },
               {
                 h2: "Safety Barrier Requirements",
@@ -688,7 +688,7 @@ const articleDefinitions: Record<
               {
                 h2: "Electrical Inspections",
                 content:
-                  "Electrical inspections are mandatory statewide for pool installations. All pool electrical work must meet Texas electrical codes.",
+                  "Electrical inspections are mandatory statewide for pool builders. All pool electrical work must meet Texas electrical codes.",
               },
               {
                 h2: "HOA Approval",
@@ -700,7 +700,7 @@ const articleDefinitions: Record<
               {
                 question: "Do I need a permit to install a pool in Texas?",
                 answer:
-                  "Yes, most Texas cities require permits for in-ground pool installations. Check with your local building department for specific requirements.",
+                  "Yes, most Texas cities require permits for in-ground pool builders. Check with your local building department for specific requirements.",
               },
               {
                 question: "What safety barriers are required in Texas?",
@@ -710,7 +710,7 @@ const articleDefinitions: Record<
               {
                 question: "Are electrical inspections required in Texas?",
                 answer:
-                  "Yes, electrical inspections are mandatory statewide for all pool installations and electrical work.",
+                  "Yes, electrical inspections are mandatory statewide for all pool builders and electrical work.",
               },
               {
                 question: "Do I need HOA approval for a pool in Texas?",
@@ -893,7 +893,7 @@ const articleDefinitions: Record<
               {
                 h2: "Statewide Permit Requirements",
                 content:
-                  "Most California cities require permits for in-ground pool installations, major remodels, structural repairs, electrical work, and plumbing modifications. Los Angeles and San Diego often require additional engineering documents for larger builds.",
+                  "Most California cities require permits for in-ground pool builders, major remodels, structural repairs, electrical work, and plumbing modifications. Los Angeles and San Diego often require additional engineering documents for larger builds.",
               },
               {
                 h2: "Safety Barrier Laws",
@@ -1133,7 +1133,7 @@ const articleDefinitions: Record<
     },
     {
       slug: "california-pool-costs-2025",
-      title: "Average Pool Installation Prices in California in 2025",
+      title: "Average Pool builder Prices in California in 2025",
       metaTitle: "California Pool Costs in 2025",
       metaDescription:
         "See average installation, resurfacing, and repair costs for California pools.",
@@ -1142,7 +1142,7 @@ const articleDefinitions: Record<
           stateSlug,
           stateName,
           {
-            h1: "Average Pool Installation Prices in California in 2025",
+            h1: "Average Pool builder Prices in California in 2025",
             intro:
               "Pool costs in California vary significantly by region. Southern California: $60,000–$120,000, Northern California: $55,000–$110,000, resurfacing: $7,000–$15,000, and repairs: $250–$2,800. Los Angeles, San Diego, and San Jose rank among the highest-cost regions due to labor and permitting.",
             sections: [
@@ -1171,7 +1171,7 @@ const articleDefinitions: Record<
               {
                 question: "How much does a pool cost in California?",
                 answer:
-                  "Standard pool installation costs $55,000-120,000 depending on region. Southern California tends to be higher than Northern California.",
+                  "Standard pool builder costs $55,000-120,000 depending on region. Southern California tends to be higher than Northern California.",
               },
               {
                 question: "Why are California pools so expensive?",
@@ -1428,7 +1428,7 @@ const articleDefinitions: Record<
               {
                 h2: "Electrical Inspections",
                 content:
-                  "Electrical inspections are mandatory for all pool installations. All electrical work must meet Arizona electrical codes.",
+                  "Electrical inspections are mandatory for all pool builders. All electrical work must meet Arizona electrical codes.",
               },
               {
                 h2: "Processing Timelines",
@@ -1440,7 +1440,7 @@ const articleDefinitions: Record<
               {
                 question: "Do I need a permit to install a pool in Arizona?",
                 answer:
-                  "Yes, permits are required for new pool installations in Maricopa County and most Arizona cities. Check with your local building department.",
+                  "Yes, permits are required for new pool builders in Maricopa County and most Arizona cities. Check with your local building department.",
               },
               {
                 question: "What safety barriers are required in Arizona?",
@@ -1450,7 +1450,7 @@ const articleDefinitions: Record<
               {
                 question: "Are electrical inspections required in Arizona?",
                 answer:
-                  "Yes, electrical inspections are mandatory for all pool installations and electrical work.",
+                  "Yes, electrical inspections are mandatory for all pool builders and electrical work.",
               },
               {
                 question: "How long do Arizona pool permits take?",

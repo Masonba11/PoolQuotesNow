@@ -7,7 +7,7 @@ const content = fs.readFileSync(locationsPath, "utf8");
 
 // Services are fixed
 const services = [
-  { slug: "pool-installation" },
+  { slug: "pool-builder" },
   { slug: "pool-repair" },
   { slug: "pool-cleaning" },
   { slug: "pool-resurfacing" },

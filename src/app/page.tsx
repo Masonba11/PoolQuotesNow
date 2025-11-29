@@ -14,7 +14,7 @@ export default function Home() {
       <div className="min-h-screen">
         <Hero
           title="Find Trusted Pool Professionals Near You"
-          subtitle="Get free quotes from licensed pool contractors for installation, repair, cleaning, and more."
+          subtitle="Get free quotes from licensed pool contractors for Pool builder, repair, cleaning, and more."
         />
 
         {/* Services Section */}

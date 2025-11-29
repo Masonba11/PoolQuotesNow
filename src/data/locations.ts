@@ -1,8 +1,8 @@
 export const SERVICES = [
   {
-    slug: "pool-installation",
-    name: "Pool Installation",
-    description: "Professional pool installation services for your home",
+    slug: "pool-builder",
+    name: "Pool builder",
+    description: "Professional pool builder services for your home",
   },
   {
     slug: "pool-repair",
